@@ -42,7 +42,7 @@ class _Choose_LocationState extends State<Choose_Location> {
             child: ListTile(
               onTap: (){},
               title: Text(locations[index].location),
-              
+
             ),
           );
         }
