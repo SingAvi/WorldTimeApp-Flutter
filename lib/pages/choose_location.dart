@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:worldtimeapp/services/world_time.dart';
 class Choose_Location extends StatefulWidget {
@@ -18,6 +19,17 @@ class _Choose_LocationState extends State<Choose_Location> {
   WorldTime(url: 'Asia/Seoul', location: 'Seoul', flag: 'south_korea.png'),
   WorldTime(url: 'Asia/Jakarta', location: 'Jakarta', flag: 'indonesia.png'),
   ];
+
+  void updateLocation(index) async {
+    WorldTime instance = locations[index];
+    await instance.getTime();
+    Navigator.pop(context,{
+      'location':instance.location,
+      'time':instance.time,
+      'flag':instance.flag,
+      'dayOrNight': instance.isDayOrNight,
+    });
+  }
 
 
   @override
@@ -40,7 +52,9 @@ class _Choose_LocationState extends State<Choose_Location> {
         itemBuilder: (context,index){
           return Card(
             child: ListTile(
-              onTap: (){},
+              onTap: (){
+                  updateLocation(index);
+              },
               title: Text(locations[index].location),
 
             ),

@@ -29,7 +29,7 @@ class WorldTime {
       // Adding the offset to the Datetime
       now = now.add(Duration(hours:int.parse(dateOffsetHours),minutes:int.parse(dateOffsetMinutes) ));
 
-      isDayOrNight = now.hour > 6 && now.hour < 18 ? true : false;
+      isDayOrNight = now.hour > 5 && now.hour < 18 ? true : false;
       //set time property
       time = DateFormat.jm().format(now);
     }
