@@ -1,8 +1,27 @@
-# World Time App - Flutter
+# World Time App - Flutter 
+
+Async Task Involved ♥
 
 ![Screenshot_1593993373](https://user-images.githubusercontent.com/23066967/86545110-07f1e580-bf4a-11ea-8ad4-63ddd4828a6a.png)
 
 ## Third Party API - World Time Zone 
+
+## Widgets Used :
+> Scaffold
+> ListView
+> Card
+> FlatButton
+> Container
+> SizedBox
+> Row
+> Column
+> SpinKit - Chasing Dots 
+
+## States Used :
+  > Stateful
+  > Stateless 
+  
+
 
 ## Getting Started
 
